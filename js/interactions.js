@@ -81,3 +81,11 @@ export const revealSecret = () => {
     revealBtn.style.display = 'none';
     nextBtn.style.display = 'inline-block';
 };
+
+export const saveConstellation = () => {
+    const canvas = document.getElementById('star-canvas');
+    const link = document.createElement('a');
+    link.download = 'our-constellation.png';
+    link.href = canvas.toDataURL();
+    link.click();
+};

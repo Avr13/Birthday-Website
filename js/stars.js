@@ -13,22 +13,35 @@ export const initStars = () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     
-    const stars = page.pattern === 'heart' ? [
+    const heartStars = page.pattern === 'heart' ? [
         {x: 0.5, y: 0.3}, {x: 0.35, y: 0.2}, {x: 0.2, y: 0.3}, {x: 0.15, y: 0.5},
         {x: 0.2, y: 0.7}, {x: 0.35, y: 0.85}, {x: 0.5, y: 0.95}, {x: 0.65, y: 0.85},
         {x: 0.8, y: 0.7}, {x: 0.85, y: 0.5}, {x: 0.8, y: 0.3}, {x: 0.65, y: 0.2}
     ] : page.stars;
     
-    const points = stars.map(s => ({ x: s.x * canvas.width, y: s.y * canvas.height, connected: false }));
+    const decorativeStars = [];
+    for (let i = 0; i < 80; i++) {
+        decorativeStars.push({ x: Math.random(), y: Math.random(), decorative: true });
+    }
+    
+    const points = heartStars.map(s => ({ x: s.x * canvas.width, y: s.y * canvas.height, connected: false, connectable: true }));
+    const allStars = [...points, ...decorativeStars.map(s => ({ x: s.x * canvas.width, y: s.y * canvas.height, decorative: true }))];
     let connected = [];
     
     const draw = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        points.forEach((p, i) => {
-            ctx.fillStyle = p.connected ? '#ffd700' : '#fff';
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
-            ctx.fill();
+        allStars.forEach((p) => {
+            if (p.decorative) {
+                ctx.fillStyle = '#fff';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+            } else {
+                ctx.fillStyle = p.connected ? '#ffd700' : '#fff';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
+                ctx.fill();
+            }
         });
         for (let i = 0; i < connected.length - 1; i++) {
             ctx.strokeStyle = '#ffd700';
@@ -45,7 +58,7 @@ export const initStars = () => {
         const x = e.clientX - rect.left, y = e.clientY - rect.top;
         const clicked = points.find(p => Math.hypot(p.x - x, p.y - y) < 15);
         
-        if (clicked && !clicked.connected) {
+        if (clicked && !clicked.connected && clicked.connectable) {
             clicked.connected = true;
             connected.push(clicked);
             draw();
@@ -53,7 +66,8 @@ export const initStars = () => {
             if (connected.length === points.length) {
                 msg.textContent = page.message;
                 msg.style.display = 'block';
-                btn.style.display = 'block';
+                document.getElementById('save-constellation').style.display = 'block';
+                document.getElementById('continue-stars').style.display = 'block';
                 skipBtn.style.display = 'none';
             }
         }

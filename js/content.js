@@ -111,7 +111,7 @@ export const loadContent = async () => {
     // Page 16
     document.querySelector('#page16 h1').textContent = config.pages.page16.title;
     document.querySelector('#page16 > p').textContent = config.pages.page16.instruction;
-    document.querySelector('#page16 button').textContent = config.pages.page16.button;
+    document.querySelector('#continue-stars').textContent = config.pages.page16.button;
     
     // Page 17
     document.querySelector('#page17 h1').textContent = config.pages.page17.title;

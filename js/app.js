@@ -1,6 +1,6 @@
 import { initFloatingHearts } from './animations.js';
 import { nextPage, moveButton, initProgress } from './navigation.js';
-import { blowCandle, nextLove, nextAffirmation, quizAnswer, startReactionTest, reactionClick, revealSecret } from './interactions.js';
+import { blowCandle, nextLove, nextAffirmation, quizAnswer, startReactionTest, reactionClick, revealSecret, saveConstellation } from './interactions.js';
 import { startGame } from './game.js';
 import { loadContent, config } from './content.js';
 import { initFortune, setConfig as setFortuneConfig } from './fortune.js';
@@ -22,6 +22,7 @@ window.nextAffirmation = nextAffirmation;
 window.quizAnswer = quizAnswer;
 window.reactionClick = reactionClick;
 window.revealSecret = revealSecret;
+window.saveConstellation = saveConstellation;
 
 const initApp = async () => {
     await loadContent();

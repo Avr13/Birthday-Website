@@ -180,7 +180,10 @@
         <p></p>
         <canvas id="star-canvas"></canvas>
         <p id="star-message"></p>
-        <button class="primary-btn" onclick="nextPage(17)" style="display:none;"></button>
+        <div style="display:flex; gap:10px; justify-content:center;">
+            <button id="continue-stars" class="primary-btn" onclick="nextPage(17)" style="display:none;"></button>
+            <button id="save-constellation" class="primary-btn" onclick="saveConstellation()" style="display:none;">📷</button>
+        </div>
         <button id="skip-stars" class="primary-btn" onclick="nextPage(17)">→</button>
     </div>
 
