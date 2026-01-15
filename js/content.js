@@ -110,13 +110,56 @@ export const loadContent = async () => {
     
     // Page 16
     document.querySelector('#page16 h1').textContent = config.pages.page16.title;
+    document.querySelector('#page16 > p').textContent = config.pages.page16.instruction;
     document.querySelector('#page16 button').textContent = config.pages.page16.button;
-    document.getElementById('video-player').src = config.pages.page16.videoUrl;
     
     // Page 17
     document.querySelector('#page17 h1').textContent = config.pages.page17.title;
-    const p17 = document.querySelectorAll('#page17 p');
-    p17[0].innerHTML = config.pages.page17.text1;
-    p17[1].innerHTML = config.pages.page17.text3;
-    document.querySelector('#page17 h2').textContent = config.pages.page17.text2;
+    document.querySelector('#page17 > p').textContent = config.pages.page17.instruction;
+    document.querySelector('#page17 button:last-of-type').textContent = config.pages.page17.button;
+    
+    // Page 18
+    document.querySelector('#page18 h1').textContent = config.pages.page18.title;
+    document.querySelector('#page18 > p').textContent = config.pages.page18.instruction;
+    document.querySelector('#page18 button').textContent = config.pages.page18.button;
+    
+    // Page 19
+    document.querySelector('#page19 h1').textContent = config.pages.page19.title;
+    document.querySelector('#page19 > p').textContent = config.pages.page19.instruction;
+    document.querySelector('#page19 button').textContent = config.pages.page19.button;
+    
+    // Page 20
+    document.querySelector('#page20 h1').textContent = config.pages.page20.title;
+    document.querySelector('#page20 > p').textContent = config.pages.page20.instruction;
+    document.querySelector('#page20 button').textContent = config.pages.page20.button;
+    
+    // Page 21
+    document.querySelector('#page21 h1').textContent = config.pages.page21.title;
+    document.querySelector('#page21 > p').textContent = config.pages.page21.instruction;
+    document.querySelector('#page21 button').textContent = config.pages.page21.button;
+    
+    // Page 22
+    document.querySelector('#page22 h1').textContent = config.pages.page22.title;
+    document.querySelector('#page22 > p').textContent = config.pages.page22.instruction;
+    document.querySelector('#page22 button').textContent = config.pages.page22.button;
+    
+    // Page 23 - Video
+    document.querySelector('#page23 h1').textContent = config.pages.page23.title;
+    document.querySelector('#page23 button').textContent = config.pages.page23.button;
+    document.getElementById('video-player').src = config.pages.page23.videoUrl;
+    
+    // Page 24 - Final
+    document.querySelector('#page24 h1').textContent = config.pages.page24.title;
+    const p24 = document.querySelectorAll('#page24 p');
+    p24[0].innerHTML = config.pages.page24.text1;
+    p24[1].innerHTML = config.pages.page24.text3;
+    document.querySelector('#page24 h2').textContent = config.pages.page24.text2;
+    document.querySelector('#page24 button').textContent = config.pages.page24.button || 'Next ➜';
+    
+    // Page 25 - Grand Finale
+    document.querySelector('#page25 h1').textContent = config.pages.page25.title;
+    const p25 = document.querySelectorAll('#page25 p');
+    p25[0].innerHTML = config.pages.page25.text1;
+    p25[1].innerHTML = config.pages.page25.text3;
+    document.querySelector('#page25 h2').textContent = config.pages.page25.text2;
 };

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Happy Birthday ❤️",
-    "enabledPages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    "enabledPages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
   },
   "pages": {
     "page1": {
@@ -141,20 +141,87 @@
       "instruction": "Pop all balloons to reveal the message!",
       "balloonCount": 8,
       "message": "I LOVE U",
-      "button": "Continue to Final Gift 🎁"
+      "button": "Continue ➜"
     },
     "page16": {
-      "type": "video",
-      "title": "A Small Video for You! 💝",
-      "videoUrl": "video.mp4",
-      "button": "Finally... 💖"
+      "type": "stars",
+      "title": "Star Gazing 🌟",
+      "instruction": "Connect the stars to reveal the constellation!",
+      "pattern": "heart",
+      "message": "✨ You're my star! ✨",
+      "button": "Continue ➜"
     },
     "page17": {
+      "type": "polaroid",
+      "title": "Polaroid Memory 📸",
+      "instruction": "Tap...Tap... to develop the photo!",
+      "shakesNeeded": 7,
+      "imageUrl": "media/photo.jpg",
+      "message": "💕 This moment with you is picture perfect! 💕",
+      "button": "Next ➜"
+    },
+    "page18": {
+      "type": "scratch",
+      "title": "Scratch Card 🎫",
+      "instruction": "Scratch to reveal your surprise!",
+      "message": "🎉 You won a lifetime of love and happiness! 💕",
+      "button": "Next ✨"
+    },
+    "page19": {
+      "type": "well",
+      "title": "Wishing Well 🪙",
+      "instruction": "Tap to toss coins and make wishes!",
+      "wishes": [
+        "💕 I wish for endless adventures together",
+        "✨ I wish to make you smile every day",
+        "🌟 I wish for a lifetime of memories with you",
+        "💖 I wish to grow old by your side",
+        "🎉 I wish for all your dreams to come true"
+      ],
+      "button": "Continue ➜"
+    },
+    "page20": {
+      "type": "countdown",
+      "title": "Time Together ⏰",
+      "instruction": "Counting every moment with you...",
+      "startDate": "2022-03-15T00:00:00",
+      "message": "⏰ Every second with you counts! 💕",
+      "button": "Continue ➜"
+    },
+    "page21": {
+      "type": "fingerprint",
+      "title": "Two Become One 💗",
+      "instruction": "Tap both fingerprints to merge them!",
+      "message": "💕 Together, we are complete! 💕",
+      "button": "Next ✨"
+    },
+    "page22": {
+      "type": "bottle",
+      "title": "Message in a Bottle 🍾",
+      "instruction": "Tap the bottle to open it!",
+      "message": "If I could give you one thing in life, I would give you the ability to see yourself through my eyes. Only then would you realize how special you are to me. 💕",
+      "button": "Next ➜"
+    },
+    "page23": {
+      "type": "video",
+      "title": "A Small Video for You! 💝",
+      "videoUrl": "media/video.mp4",
+      "button": "Finally... 💖"
+    },
+    "page24": {
       "type": "final",
       "title": "Happy Birthday!",
       "text1": "You are my today, my tomorrow, and my always.",
       "text2": "I Love You ❤️",
-      "text3": "Forever starts today ✨"
+      "text3": "Forever starts today ✨",
+      "button": "One More Thing... 💖"
+    },
+    "page25": {
+      "type": "final",
+      "title": "The End... Or Just The Beginning? 💝",
+      "text1": "Thank you for being you, for being mine, for being everything.",
+      "text2": "Happy Birthday, My Love! 🎂",
+      "text3": "Here's to forever and always ✨💕"
     }
   }
 }

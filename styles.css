@@ -345,3 +345,221 @@ button {
 #skip-btn:hover {
     transform: translateX(3px);
 }
+
+#skip-stars {
+    background: transparent;
+    color: var(--pink);
+    border: none;
+    box-shadow: none;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 10px 0;
+    float: right;
+    margin-right: 20px;
+}
+
+#skip-stars:hover {
+    transform: translateX(3px);
+}
+
+/* Stars */
+#star-canvas {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #001, #003);
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+#star-message {
+    display: none;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Polaroid */
+.polaroid {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    filter: blur(10px);
+    opacity: 0.3;
+    transition: all 0.3s;
+    user-select: none;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+#tap-polaroid {
+    margin-top: 20px;
+}
+
+#polaroid-message {
+    display: none;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Scratch Card */
+#scratch-canvas {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+    touch-action: none;
+}
+
+#scratch-message {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--pink-light);
+    border-radius: 15px;
+}
+
+/* Wishing Well */
+#wishing-well {
+    font-size: 100px;
+    cursor: pointer;
+    position: relative;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coin {
+    position: absolute;
+    font-size: 30px;
+    animation: coinDrop 1s ease-in forwards;
+}
+
+@keyframes coinDrop {
+    to { transform: translateY(100px); opacity: 0; }
+}
+
+#wishes-list {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wish-item {
+    background: var(--pink-light);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Countdown */
+#countdown-display {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.time-unit {
+    text-align: center;
+}
+
+.time-unit span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--pink-dark);
+}
+
+#countdown-message {
+    display: none;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Fingerprint */
+.fingerprint-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.fingerprint {
+    font-size: 80px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.fingerprint:hover {
+    transform: scale(1.1);
+}
+
+.fingerprint.pressed {
+    animation: pulse 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+#merged-heart {
+    display: none;
+    font-size: 120px;
+    margin: 20px 0;
+}
+
+@keyframes heartGrow {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+#fingerprint-message {
+    display: none;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Bottle */
+#message-bottle {
+    font-size: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+@keyframes bottleShake {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+#bottle-message {
+    display: none;
+    font-size: 1.3rem;
+    color: var(--pink-dark);
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--pink-light);
+    border-radius: 15px;
+}
+
+@keyframes unfold {
+    from { transform: scale(0.5) rotateX(-90deg); opacity: 0; }
+    to { transform: scale(1) rotateX(0); opacity: 1; }
+}

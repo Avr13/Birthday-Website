@@ -138,7 +138,7 @@
         <button id="secret-next" class="primary-btn" onclick="nextPage(13)" style="display:none;"></button>
     </div>
 
-    <!-- PAGE 13 - Fortune Cookie -->
+    <!-- PAGE 13 -->
     <div id="page13" class="page">
         <div class="heart-icon">🥠</div>
         <h1></h1>
@@ -148,7 +148,7 @@
         <button class="primary-btn" onclick="nextPage(14)" style="display:none;"></button>
     </div>
 
-    <!-- PAGE 14 - Love Calculator -->
+    <!-- PAGE 14 -->
     <div id="page14" class="page">
         <div class="heart-icon">💕</div>
         <h1></h1>
@@ -163,7 +163,7 @@
         <button class="primary-btn" onclick="nextPage(15)" style="display:none;"></button>
     </div>
 
-    <!-- PAGE 15 - Balloon Pop -->
+    <!-- PAGE 15 -->
     <div id="page15" class="page">
         <div class="heart-icon">🎈</div>
         <h1></h1>
@@ -173,17 +173,103 @@
         <button class="primary-btn" onclick="nextPage(16)" style="display:none;"></button>
     </div>
 
-    <!-- PAGE 16 - Video -->
+    <!-- PAGE 16 - Stars -->
     <div id="page16" class="page">
+        <div class="heart-icon">🌟</div>
+        <h1></h1>
+        <p></p>
+        <canvas id="star-canvas"></canvas>
+        <p id="star-message"></p>
+        <button class="primary-btn" onclick="nextPage(17)" style="display:none;"></button>
+        <button id="skip-stars" class="primary-btn" onclick="nextPage(17)">→</button>
+    </div>
+
+    <!-- PAGE 17 - Polaroid -->
+    <div id="page17" class="page">
+        <div class="heart-icon">📸</div>
+        <h1></h1>
+        <p></p>
+        <div class="polaroid">📷</div>
+        <button id="tap-polaroid" class="primary-btn">Tap to Develop 👆</button>
+        <p id="polaroid-message"></p>
+        <button class="primary-btn" onclick="nextPage(18)" style="display:none;"></button>
+    </div>
+
+    <!-- PAGE 18 - Scratch Card -->
+    <div id="page18" class="page">
+        <div class="heart-icon">🎫</div>
+        <h1></h1>
+        <p></p>
+        <canvas id="scratch-canvas"></canvas>
+        <p id="scratch-message"></p>
+        <button class="primary-btn" onclick="nextPage(19)" style="display:none;"></button>
+    </div>
+
+    <!-- PAGE 19 - Wishing Well -->
+    <div id="page19" class="page">
+        <div class="heart-icon">🪙</div>
+        <h1></h1>
+        <p></p>
+        <div id="wishing-well">⛲</div>
+        <div id="wishes-list"></div>
+        <button class="primary-btn" onclick="nextPage(20)" style="display:none;"></button>
+    </div>
+
+    <!-- PAGE 20 - Countdown -->
+    <div id="page20" class="page">
+        <div class="heart-icon">⏰</div>
+        <h1></h1>
+        <p></p>
+        <div id="countdown-display"></div>
+        <p id="countdown-message"></p>
+        <button class="primary-btn" onclick="nextPage(21)"></button>
+    </div>
+
+    <!-- PAGE 21 - Fingerprint -->
+    <div id="page21" class="page">
+        <div class="heart-icon">💗</div>
+        <h1></h1>
+        <p></p>
+        <div class="fingerprint-container">
+            <div id="fingerprint-left" class="fingerprint">👈</div>
+            <div id="fingerprint-right" class="fingerprint">👉</div>
+        </div>
+        <div id="merged-heart">❤️</div>
+        <p id="fingerprint-message"></p>
+        <button class="primary-btn" onclick="nextPage(22)" style="display:none;"></button>
+    </div>
+
+    <!-- PAGE 22 - Bottle -->
+    <div id="page22" class="page">
+        <div class="heart-icon">🍾</div>
+        <h1></h1>
+        <p></p>
+        <div id="message-bottle">🍾</div>
+        <p id="bottle-message"></p>
+        <button class="primary-btn" onclick="nextPage(23)" style="display:none;"></button>
+    </div>
+
+    <!-- PAGE 23 - Video -->
+    <div id="page23" class="page">
         <div class="heart-icon">💝</div>
         <h1></h1>
         <video id="video-player" controls style="width:100%; max-width:400px; border-radius:15px; margin:20px 0;"></video>
-        <button class="primary-btn" onclick="nextPage(17)"></button>
+        <button class="primary-btn" onclick="nextPage(24)"></button>
     </div>
 
-    <!-- PAGE 17 - Final -->
-    <div id="page17" class="page">
+    <!-- PAGE 24 - Final -->
+    <div id="page24" class="page">
         <div class="heart-icon">🎁</div>
+        <h1></h1>
+        <p></p>
+        <h2 style="color: var(--pink-dark)"></h2>
+        <p></p>
+        <button class="primary-btn" onclick="nextPage(25)"></button>
+    </div>
+
+    <!-- PAGE 25 - Grand Finale -->
+    <div id="page25" class="page">
+        <div class="heart-icon">💝</div>
         <h1></h1>
         <p></p>
         <h2 style="color: var(--pink-dark)"></h2>
