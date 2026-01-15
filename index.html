@@ -1,495 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday ❤️</title>
-
-<style>
-:root {
-    --pink: #ff4d6d;
-    --pink-dark: #d63384;
-    --pink-light: #fff0f5;
-    --white: #ffffff;
-}
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: linear-gradient(135deg, #ffe6ee, #ffd6e8);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.heart {
-    position: fixed;
-    bottom: -20px;
-    font-size: 20px;
-    animation: floatUp 6s linear infinite;
-    opacity: 0.6;
-    z-index: -1;
-}
-@keyframes floatUp {
-    from { transform: translateY(0) scale(1); }
-    to { transform: translateY(-110vh) scale(1.5); opacity: 0; }
-}
-
-.page {
-    display: none;
-    width: 90%;
-    max-width: 500px;
-    background: var(--white);
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-    text-align: center;
-    animation: popIn 0.5s ease-out;
-}
-.page.active { display: block; }
-
-@keyframes popIn {
-    0% { opacity: 0; transform: scale(0.9) translateY(20px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-h1 { color: var(--pink-dark); margin-bottom: 10px; }
-p { color: #555; line-height: 1.5; }
-
-.heart-icon {
-    font-size: 60px;
-    animation: heartbeat 1.5s infinite;
-    margin-bottom: 15px;
-}
-@keyframes heartbeat {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-}
-
-.btn-container {
-    margin-top: 30px;
-    position: relative;
-    height: 100px;
-}
-
-button {
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 999px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-    margin: 5px;
-}
-
-.primary-btn {
-    background: linear-gradient(135deg, var(--pink), #ff8fab);
-    color: white;
-    box-shadow: 0 8px 20px rgba(255,77,109,0.4);
-}
-.primary-btn:hover {
-    transform: scale(1.05);
-}
-
-.feedback-msg {
-    font-weight: bold;
-    color: var(--pink-dark);
-    margin-top: 15px;
-    min-height: 24px;
-    transition: 0.3s;
-}
-
-.game-box {
-    padding: 20px;
-    border-radius: 20px;
-    background: var(--pink-light);
-    margin-top: 20px;
-    min-height: 150px;
-    position: relative;
-}
-
-#no-btn, #pizza-btn {
-    background: #adb5bd;
-    color: white;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.1s linear;
-}
-
-.timeline {
-    text-align: left;
-    border-left: 3px dashed var(--pink);
-    margin: 25px auto;
-    padding-left: 20px;
-    max-width: 300px;
-}
-
-.timeline-item {
-    margin-bottom: 20px;
-    position: relative;
-}
-.timeline-item::before {
-    content: '💖';
-    position: absolute;
-    left: -32px;
-}
-
-.cake {
-    font-size: 90px;
-    cursor: pointer;
-    animation: wiggle 1.5s infinite;
-    user-select: none;
-}
-@keyframes wiggle {
-    0%,100% { transform: rotate(0); }
-    50% { transform: rotate(8deg); }
-}
-
-.confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    z-index: 10;
-    animation: fall 3s linear forwards;
-}
-@keyframes fall {
-    to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-}
-
-#game-area {
-    height: 200px;
-    background: #fff0f5;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    border: 2px dashed var(--pink);
-    margin: 15px 0;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<script>
-/* Floating background hearts */
-setInterval(() => {
-    const heart = document.createElement('div');
-    heart.className = 'heart';
-    heart.innerHTML = '💗';
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 8000);
-}, 600);
-</script>
-
-<!-- PAGE 1 -->
-<div id="page1" class="page active">
-    <div class="heart-icon">❤️</div>
-    <h1>Happy Birthday!</h1>
-    <p>Before we begin…<br><strong>Will you be my date today? 🥺👉👈</strong></p>
-    <div class="btn-container">
-        <button class="primary-btn" onclick="nextPage(2)">YES!!! 💕</button>
-        <button id="no-btn" onmouseover="moveButton('no-btn')" onclick="moveButton('no-btn')">No 🙄</button>
+    <!-- PAGE 1 -->
+    <div id="page1" class="page active">
+        <div class="heart-icon">❤️</div>
+        <h1></h1>
+        <p></p>
+        <div class="btn-container">
+            <button class="primary-btn" onclick="nextPage(2)"></button>
+            <button id="no-btn" onmouseover="moveButton('no-btn')" onclick="moveButton('no-btn')"></button>
+        </div>
     </div>
-</div>
 
-<!-- PAGE 2 -->
-<div id="page2" class="page">
-    <div class="heart-icon">😌</div>
-    <h1>Yes 💕</h1>
-    <p><strong>I knew you would choose yes!</strong></p>
-    <p>You have no choice anyway~</p>
-    <button class="primary-btn" onclick="nextPage(3)">Continue 💖</button>
-</div>
-
-<!-- PAGE 3 -->
-<div id="page3" class="page">
-    <div class="heart-icon">💌</div>
-    <h1>A Tiny Love Letter</h1>
-    <p>Every laugh with you is my favorite sound.<br>Every moment with you feels like home.</p>
-    <p><i>“You are my favorite everything.”</i></p>
-    <button class="primary-btn" onclick="nextPage(4)">Our Story ✨</button>
-</div>
-
-<!-- PAGE 4 -->
-<div id="page4" class="page">
-    <div class="heart-icon">📖</div>
-    <h1>Us 🥰</h1>
-    <div class="timeline">
-        <div class="timeline-item"><strong>The Day We Met:</strong> Magic ✨</div>
-        <div class="timeline-item"><strong>First Date:</strong> Butterflies 🦋</div>
-        <div class="timeline-item"><strong>Today:</strong> Your Birthday!!! 🎉</div>
+    <!-- PAGE 2 -->
+    <div id="page2" class="page">
+        <div class="heart-icon">😌</div>
+        <h1></h1>
+        <p></p>
+        <p></p>
+        <button class="primary-btn" onclick="nextPage(3)"></button>
     </div>
-    <button class="primary-btn" onclick="nextPage(5)">Next 💖</button>
-</div>
 
-<!-- PAGE 5 -->
-<div id="page5" class="page">
-    <div class="heart-icon">🎂</div>
-    <h1>Make a Wish!</h1>
-    <div class="cake" onclick="blowCandle()">🎂</div>
-    <p id="cake-instruction">Tap the cake to blow out the candle! 💨</p>
-    <div id="final-msg" style="display:none;">
-        <h2>🎉 Wish Granted! 🎉</h2>
-        <p>I love you more than cake ❤️</p>
-        <button class="primary-btn" onclick="nextPage(6)">Continue 💕</button>
+    <!-- PAGE 3 -->
+    <div id="page3" class="page">
+        <div class="heart-icon">💌</div>
+        <h1></h1>
+        <p></p>
+        <p></p>
+        <button class="primary-btn" onclick="nextPage(4)"></button>
     </div>
-</div>
 
-<!-- PAGE 6 -->
-<div id="page6" class="page">
-    <div class="heart-icon">💞</div>
-    <h1>Why I Love You</h1>
-    <p id="love-line">Click to reveal 💕</p>
-    <button class="primary-btn" onclick="nextLove()">Reveal Reason</button><br><br>
-    <button class="primary-btn" onclick="nextPage(7)">Next ➜</button>
-</div>
-
-<!-- PAGE 7 -->
-<div id="page7" class="page">
-    <div class="heart-icon">🎮</div>
-    <h1>Catch the Hearts!</h1>
-    <p>Tap 10 hearts to continue 💖</p>
-    <h2 id="score">Score: 0</h2>
-    <p id="game-msg" style="font-weight:bold; color: var(--pink-dark);"></p>
-    <div id="game-area"></div>
-    <button id="continue-btn" class="primary-btn" onclick="nextPage(8)" style="display:none;">
-    Continue ➜
-    </button>
-</div>
-
-<!-- PAGE 8 -->
-<div id="page8" class="page">
-    <div class="heart-icon">💌</div>
-    <h1>Daily Reminder</h1>
-    <p id="affirmation">Click below 💫</p>
-    <button class="primary-btn" onclick="nextAffirmation()">Tap Me</button><br><br>
-    <button class="primary-btn" onclick="nextPage(9)">Next ✨</button>
-</div>
-
-<!-- PAGE 9 -->
-<div id="page9" class="page">
-    <div class="heart-icon">🌟</div>
-    <h1>One More Thing...</h1>
-    <p>No matter where life takes us,<br>I choose you. Always.</p>
-    <p>Ready for a quick test?</p>
-    <button class="primary-btn" onclick="nextPage(10)">Let's Go! ➜</button>
-</div>
-
-<!-- PAGE 10 -->
-<div id="page10" class="page">
-    <div class="heart-icon">🧠</div>
-    <h1>Mini Quiz 💕</h1>
-    <p>How well do you know me?</p>
-    <div class="game-box">
-        <p><strong>What do I love more?</strong></p>
-        <button class="primary-btn" onclick="quizAnswer('You')">You ❤️</button>
-        <button id="pizza-btn" onmouseover="moveButton('pizza-btn')" onclick="moveButton('pizza-btn')">Pizza 🍕</button>
-        <p id="quiz-feedback" class="feedback-msg"></p>
-        <button id="quiz-next" class="primary-btn" onclick="nextPage(11)" style="display:none;">Next ➜</button>
+    <!-- PAGE 4 -->
+    <div id="page4" class="page">
+        <div class="heart-icon">📖</div>
+        <h1></h1>
+        <div class="timeline">
+            <div class="timeline-item"></div>
+            <div class="timeline-item"></div>
+            <div class="timeline-item"></div>
+        </div>
+        <button class="primary-btn" onclick="nextPage(5)"></button>
     </div>
-</div>
 
-<!-- PAGE 11 -->
-<div id="page11" class="page">
-    <div class="heart-icon">⏱</div>
-    <h1>Reaction Test</h1>
-    <p id="reactionText">Wait for the heart... then tap!</p>
-    <button id="reactionBtn" class="primary-btn" onclick="reactionClick()" disabled>Wait for it...</button>
-    <p id="reaction-feedback" class="feedback-msg"></p>
-    <button id="reaction-next" class="primary-btn" onclick="nextPage(12)" style="display:none;">Next ➜</button>
-</div>
+    <!-- PAGE 5 -->
+    <div id="page5" class="page">
+        <div class="heart-icon">🎂</div>
+        <h1></h1>
+        <div class="cake" onclick="blowCandle()">🎂</div>
+        <p id="cake-instruction"></p>
+        <div id="final-msg" style="display:none;">
+            <h2></h2>
+            <p></p>
+            <button class="primary-btn" onclick="nextPage(6)"></button>
+        </div>
+    </div>
 
-<!-- PAGE 12 -->
-<div id="page12" class="page">
-    <div class="heart-icon">🔐</div>
-    <h1>Secret Message</h1>
-    <p id="secretText">Click to decrypt 💌</p>
-    <button id="reveal-btn" class="primary-btn" onclick="revealSecret()">Reveal</button>
-    <button id="secret-next" class="primary-btn" onclick="nextPage(13)" style="display:none;">See Final Gift 🎁</button>
-</div>
+    <!-- PAGE 6 -->
+    <div id="page6" class="page">
+        <div class="heart-icon">💞</div>
+        <h1></h1>
+        <p id="love-line"></p>
+        <button class="primary-btn" onclick="nextLove()"></button><br><br>
+        <button class="primary-btn" onclick="nextPage(7)"></button>
+    </div>
 
-<!-- PAGE 13 -->
-<div id="page13" class="page">
-    <div class="heart-icon">🎁</div>
-    <h1>Happy Birthday!</h1>
-    <p>You are my today, my tomorrow, and my always.</p>
-    <h2 style="color: var(--pink-dark)">I Love You ❤️</h2>
-    <p>Forever starts today ✨</p>
-    <!-- <button class="primary-btn" onclick="location.reload()">Replay? 🔄</button> -->
-</div>
+    <!-- PAGE 7 -->
+    <div id="page7" class="page">
+        <div class="heart-icon">🎮</div>
+        <h1></h1>
+        <p></p>
+        <h2 id="score">Score: 0</h2>
+        <p id="game-msg" style="font-weight:bold; color: var(--pink-dark);"></p>
+        <div id="game-area"></div>
+        <button id="continue-btn" class="primary-btn" onclick="nextPage(8)" style="display:none;"></button>
+        <button id="skip-btn" class="primary-btn" onclick="nextPage(8)">→</button>
+    </div>
 
-<script>
-/* Navigation Logic */
-function nextPage(num) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page' + num).classList.add('active');
+    <!-- PAGE 8 -->
+    <div id="page8" class="page">
+        <div class="heart-icon">💌</div>
+        <h1></h1>
+        <p id="affirmation"></p>
+        <button class="primary-btn" onclick="nextAffirmation()"></button><br><br>
+        <button class="primary-btn" onclick="nextPage(9)"></button>
+    </div>
 
-    if(num === 7) resetGame();
-    if(num === 11) startReaction();
-}
+    <!-- PAGE 9 -->
+    <div id="page9" class="page">
+        <div class="heart-icon">🌟</div>
+        <h1></h1>
+        <p></p>
+        <p></p>
+        <button class="primary-btn" onclick="nextPage(10)"></button>
+    </div>
 
-/* Reusable Floating Button logic */
-function moveButton(id) {
-    const btn = document.getElementById(id);
-    const maxX = window.innerWidth - btn.offsetWidth - 20;
-    const maxY = window.innerHeight - btn.offsetHeight - 20;
-    
-    btn.style.position = 'fixed';
-    btn.style.left = Math.max(10, Math.random() * maxX) + 'px';
-    btn.style.top = Math.max(10, Math.random() * maxY) + 'px';
-    btn.style.zIndex = '999';
-}
+    <!-- PAGE 10 -->
+    <div id="page10" class="page">
+        <div class="heart-icon">🧠</div>
+        <h1></h1>
+        <p></p>
+        <div class="game-box">
+            <p><strong></strong></p>
+            <button class="primary-btn" onclick="quizAnswer('You')"></button>
+            <button id="pizza-btn" onmouseover="moveButton('pizza-btn')" onclick="moveButton('pizza-btn')"></button>
+            <p id="quiz-feedback" class="feedback-msg"></p>
+            <button id="quiz-next" class="primary-btn" onclick="nextPage(11)" style="display:none;"></button>
+        </div>
+    </div>
 
-/* Quiz Logic - No auto-transition */
-function quizAnswer(choice) {
-    const feedback = document.getElementById('quiz-feedback');
-    const nextBtn = document.getElementById('quiz-next');
-    const pizzaBtn = document.getElementById('pizza-btn');
-    
-    if(choice === 'You') {
-        feedback.innerText = "Correct! It's always you 😌❤️";
-        nextBtn.style.display = 'inline-block';
-        pizzaBtn.style.display = 'none'; // Hide the evading button once answered correctly
-    }
-}
+    <!-- PAGE 11 -->
+    <div id="page11" class="page">
+        <div class="heart-icon">⏱</div>
+        <h1></h1>
+        <div id="trafficLights" style="display:flex; justify-content:center; gap:15px; margin:20px 0;">
+            <div id="redLight" class="traffic-light"></div>
+            <div id="yellowLight" class="traffic-light"></div>
+            <div id="greenLight" class="traffic-light"></div>
+        </div>
+        <p id="reactionText"></p>
+        <button id="reactionBtn" class="primary-btn" onclick="reactionClick()" disabled></button>
+        <p id="reaction-feedback" class="feedback-msg"></p>
+        <button id="reaction-next" class="primary-btn" onclick="nextPage(12)" style="display:none;"></button>
+    </div>
 
-/* Reaction Game Logic - No auto-transition */
-let ready = false;
-function startReaction(){
-    ready = false;
-    const btn = document.getElementById("reactionBtn");
-    const txt = document.getElementById("reactionText");
-    const feedback = document.getElementById("reaction-feedback");
-    const nextBtn = document.getElementById("reaction-next");
-    
-    btn.style.display = 'inline-block';
-    nextBtn.style.display = 'none';
-    btn.disabled = true;
-    btn.innerText = "Wait...";
-    txt.innerText = "Get ready...";
-    feedback.innerText = "";
-    
-    setTimeout(() => {
-        ready = true;
-        txt.innerText = "NOW!!!";
-        btn.disabled = false;
-        btn.innerText = "TAP ❤️";
-    }, 2000 + Math.random() * 3000);
-}
+    <!-- PAGE 12 -->
+    <div id="page12" class="page">
+        <div class="heart-icon">🔐</div>
+        <h1></h1>
+        <p id="secretText"></p>
+        <button id="reveal-btn" class="primary-btn" onclick="revealSecret()"></button>
+        <button id="secret-next" class="primary-btn" onclick="nextPage(13)" style="display:none;"></button>
+    </div>
 
-function reactionClick(){
-    if(ready){
-        document.getElementById("reaction-feedback").innerText = "Fast! Just like my heartbeat for you 💓";
-        document.getElementById("reactionBtn").style.display = "none";
-        document.getElementById("reaction-next").style.display = "inline-block";
-    }
-}
+    <!-- PAGE 13 - Fortune Cookie -->
+    <div id="page13" class="page">
+        <div class="heart-icon">🥠</div>
+        <h1></h1>
+        <p></p>
+        <div class="fortune-cookie">🥠</div>
+        <p id="fortune-message"></p>
+        <button class="primary-btn" onclick="nextPage(14)" style="display:none;"></button>
+    </div>
 
-/* Secret Message Logic - No auto-transition */
-function revealSecret(){
-    document.getElementById("secretText").innerText = "You make my world softer, brighter, and happier than I ever thought possible. 💖";
-    document.getElementById("reveal-btn").style.display = "none";
-    document.getElementById("secret-next").style.display = "inline-block";
-}
+    <!-- PAGE 14 - Love Calculator -->
+    <div id="page14" class="page">
+        <div class="heart-icon">💕</div>
+        <h1></h1>
+        <p></p>
+        <div class="love-meter">
+            <div id="love-bar">
+                <span id="love-percent">0%</span>
+            </div>
+        </div>
+        <p id="calc-message"></p>
+        <p id="calc-desc"></p>
+        <button class="primary-btn" onclick="nextPage(15)" style="display:none;"></button>
+    </div>
 
-/* Cake & Confetti */
-function blowCandle() {
-    document.querySelector('.cake').innerHTML = "🧁";
-    document.getElementById('cake-instruction').style.display = 'none';
-    document.getElementById('final-msg').style.display = 'block';
+    <!-- PAGE 15 - Balloon Pop -->
+    <div id="page15" class="page">
+        <div class="heart-icon">🎈</div>
+        <h1></h1>
+        <p></p>
+        <div id="balloon-container"></div>
+        <p id="balloon-message">🎉 I LOVE YOU 🎉</p>
+        <button class="primary-btn" onclick="nextPage(16)" style="display:none;"></button>
+    </div>
 
-    for(let i=0; i<60; i++){
-        const c = document.createElement('div');
-        c.className = 'confetti';
-        c.style.left = Math.random() * 100 + 'vw';
-        c.style.background = ['#ff4d6d','#ffd166','#06d6a0','#118ab2'][Math.floor(Math.random()*4)];
-        c.style.animationDuration = (1.5 + Math.random() * 2) + 's';
-        document.body.appendChild(c);
-        setTimeout(() => c.remove(), 3000);
-    }
-}
+    <!-- PAGE 16 - Video -->
+    <div id="page16" class="page">
+        <div class="heart-icon">💝</div>
+        <h1></h1>
+        <video id="video-player" controls style="width:100%; max-width:400px; border-radius:15px; margin:20px 0;"></video>
+        <button class="primary-btn" onclick="nextPage(17)"></button>
+    </div>
 
-/* Love Lines Logic */
-const loveLines = [
-    "You make me smile without even trying 💕",
-    "You feel like home 🏡",
-    "You always know how to make me laugh 🥺",
-    "You make life so much more beautiful ✨",
-    "You’re my favorite person in the whole world ❤️"
-];
-let loveIndex = 0;
-function nextLove(){
-    document.getElementById('love-line').innerText = loveLines[loveIndex];
-    loveIndex = (loveIndex + 1) % loveLines.length;
-}
+    <!-- PAGE 17 - Final -->
+    <div id="page17" class="page">
+        <div class="heart-icon">🎁</div>
+        <h1></h1>
+        <p></p>
+        <h2 style="color: var(--pink-dark)"></h2>
+        <p></p>
+    </div>
 
-/* Heart Catching Game */
-let score = 0;
-let gameOver = false;
+    <div class="progress-tracker" id="progress-tracker"></div>
 
-function resetGame(){
-    score = 0;
-    gameOver = false;
-    document.getElementById('score').innerText = 'Score: 0';
-    document.getElementById('score').style.display = 'block';
-    document.getElementById('game-msg').innerText = '';
-    document.getElementById('continue-btn').style.display = 'none';
-    document.getElementById('game-area').innerHTML = '';
-}
-
-function spawnHeart(){
-    if(!document.getElementById('page7').classList.contains('active') || gameOver) return;
-
-    const area = document.getElementById('game-area');
-    const heart = document.createElement('div');
-    heart.innerHTML = "💖";
-    heart.style.position = 'absolute';
-    heart.style.fontSize = '30px';
-    heart.style.cursor = 'pointer';
-    heart.style.userSelect = 'none';
-
-    const maxX = area.clientWidth - 40;
-    const maxY = area.clientHeight - 40;
-    heart.style.left = Math.random() * maxX + 'px';
-    heart.style.top = Math.random() * maxY + 'px';
-
-    heart.onclick = () => {
-        score++;
-        document.getElementById('score').innerText = 'Score: ' + score;
-        heart.remove();
-        if(score >= 10){
-            gameOver = true;
-            document.getElementById('game-msg').innerText = "Wow, you caught all my love! 💖";
-            document.getElementById('continue-btn').style.display = 'inline-block';
-            area.innerHTML = "";
-        }
-    };
-
-    area.appendChild(heart);
-    setTimeout(() => { if(heart.parentNode) heart.remove(); }, 1000);
-}
-
-setInterval(spawnHeart, 800);
-
-/* Affirmations Logic */
-const affirmations = [
-    "You are deeply loved ❤️",
-    "You are more than enough ✨",
-    "You make the world a better place 🌎",
-    "You are appreciated and valued 💭",
-    "You deserve all the happiness today 💕"
-];
-let affIndex = 0;
-function nextAffirmation(){
-    document.getElementById('affirmation').innerText = affirmations[affIndex];
-    affIndex = (affIndex + 1) % affirmations.length;
-}
-</script>
-
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

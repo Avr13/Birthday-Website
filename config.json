@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "title": "Happy Birthday ❤️",
+    "enabledPages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  },
+  "pages": {
+    "page1": {
+      "type": "choice",
+      "title": "Happy Birthday!",
+      "text": "Before we begin…<br><strong>Will you be my date today? 🥺👉👈</strong>",
+      "buttons": {
+        "yes": "YES!!! 💕",
+        "no": "No 🙄"
+      }
+    },
+    "page2": {
+      "type": "text",
+      "title": "Yes 💕",
+      "text1": "I knew you would choose yes!",
+      "text2": "You have no choice anyway~",
+      "button": "Continue 💖"
+    },
+    "page3": {
+      "type": "text",
+      "title": "A Tiny Love Letter",
+      "text1": "Every laugh with you is my favorite sound.<br>Every moment with you feels like home.",
+      "text2": "You are my favorite everything.",
+      "button": "Our Story ✨"
+    },
+    "page4": {
+      "type": "timeline",
+      "title": "Us 🥰",
+      "timeline": [
+        "<strong>The Day We Met:</strong> Magic ✨",
+        "<strong>First Date:</strong> Butterflies 🦋",
+        "<strong>Today:</strong> Your Birthday!!! 🎉"
+      ],
+      "button": "Next 💖"
+    },
+    "page5": {
+      "type": "cake",
+      "title": "Make a Wish!",
+      "instruction": "Tap the cake to blow out the candle! 💨",
+      "wishGranted": "🎉 Wish Granted! 🎉",
+      "message": "I love you more than cake ❤️",
+      "button": "Continue 💕"
+    },
+    "page6": {
+      "type": "carousel",
+      "title": "Why I Love You",
+      "placeholder": "Click to reveal 💕",
+      "items": [
+        "Your smile lights up my world ✨",
+        "You make every day better 💕",
+        "Your laugh is my favorite sound 🎵",
+        "You understand me like no one else 💭",
+        "You're my best friend and soulmate 👫"
+      ],
+      "button1": "Reveal Reason",
+      "button2": "Next ➜"
+    },
+    "page7": {
+      "type": "game",
+      "title": "Catch the Hearts!",
+      "instruction": "Tap 10 hearts to continue 💖",
+      "targetScore": 10,
+      "button": "Continue ➜"
+    },
+    "page8": {
+      "type": "carousel",
+      "title": "Daily Reminder",
+      "placeholder": "Click below 💫",
+      "items": [
+        "You are loved beyond measure 💖",
+        "You make the world brighter ✨",
+        "You are enough, just as you are 🌟",
+        "Your presence is a gift 🎁",
+        "You deserve all the happiness 🌈"
+      ],
+      "button1": "Tap Me",
+      "button2": "Next ✨"
+    },
+    "page9": {
+      "type": "text",
+      "title": "One More Thing...",
+      "text1": "No matter where life takes us,<br>I choose you. Always.",
+      "text2": "Ready for a quick test?",
+      "button": "Let's Go! ➜"
+    },
+    "page10": {
+      "type": "quiz",
+      "title": "Mini Quiz 💕",
+      "subtitle": "How well do you know me?",
+      "question": "What do I love more?",
+      "correctAnswer": "You ❤️",
+      "wrongAnswer": "Pizza 🍕",
+      "feedback": "❤️ Correct! You always come first!",
+      "button": "Next ➜"
+    },
+    "page11": {
+      "type": "reaction",
+      "title": "Reaction Test",
+      "instruction": "Wait for the heart... then tap!",
+      "buttonWait": "Wait for it...",
+      "feedback": "⚡ {time}ms - This is how fast my Heart Beats for you!❤️",
+      "button": "Next ➜"
+    },
+    "page12": {
+      "type": "secret",
+      "title": "Secret Message",
+      "placeholder": "Click to decrypt 💌",
+      "message": "You are the best thing that ever happened to me. I love you more every single day. ❤️",
+      "button1": "Reveal",
+      "button2": "See More 🎁"
+    },
+    "page13": {
+      "type": "fortune",
+      "title": "Fortune Cookie 🥠",
+      "instruction": "Tap the cookie to reveal your fortune!",
+      "fortunes": [
+        "A lifetime of love awaits you both 💕",
+        "Your love story is just beginning ✨",
+        "Together, you can conquer anything 💪❤️",
+        "Every day with you is a blessing 🌟",
+        "You are each other's greatest adventure 🗺️"
+      ],
+      "button": "Continue ➜"
+    },
+    "page14": {
+      "type": "calculator",
+      "title": "Love Calculator 💕",
+      "instruction": "Calculating compatibility...",
+      "result": "100%",
+      "message": "Wow! A Perfect Match! 💖",
+      "description": "You two are absolutely meant for each other!",
+      "button": "Next ✨"
+    },
+    "page15": {
+      "type": "balloon",
+      "title": "Pop the Balloons! 🎈",
+      "instruction": "Pop all balloons to reveal the message!",
+      "balloonCount": 8,
+      "message": "I LOVE U",
+      "button": "Continue to Final Gift 🎁"
+    },
+    "page16": {
+      "type": "video",
+      "title": "A Small Video for You! 💝",
+      "videoUrl": "video.mp4",
+      "button": "Finally... 💖"
+    },
+    "page17": {
+      "type": "final",
+      "title": "Happy Birthday!",
+      "text1": "You are my today, my tomorrow, and my always.",
+      "text2": "I Love You ❤️",
+      "text3": "Forever starts today ✨"
+    }
+  }
+}
